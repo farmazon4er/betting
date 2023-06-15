@@ -2,6 +2,8 @@
 
 <% if user_signed_in? %> 
  <div> Welcome <%= current_user.email %> </div> 
+ <div> Your balance: <%= current_user.balance %> </div>
+ <%= button_to "Restore balance", users_restore_path, method: :post %>
   <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
 <% else %>
   <%= button_to "Sign in", new_user_session_path %> 
