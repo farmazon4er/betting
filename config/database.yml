@@ -10,11 +10,11 @@ default: &default
 
 development:
   <<: *default
-  database: betting-development
+  database: betting_development
 
 test:
   <<: *default
-  database: betting-test
+  database: betting_test
 
 
 production:
